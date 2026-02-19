@@ -69,11 +69,17 @@
       </p>
       <!-- buttons -->
       <div class="buttons grid grid-cols-3 gap-3">
-        <button onclick="showonly('add-money')" class="btn flex-col h-full py-4 btn-primary btn-soft">
+        <button
+          onclick="showonly('add-money')"
+          class="btn flex-col h-full py-4 btn-primary btn-soft"
+        >
           <img src="./assets/opt-1.png" alt="" />
           <p>Add Money</p>
         </button>
-        <button onclick="showonly('cashout')" class="btn flex-col h-full py-4 btn-primary btn-soft">
+        <button
+          onclick="showonly('cashout')"
+          class="btn flex-col h-full py-4 btn-primary btn-soft"
+        >
           <img src="./assets/opt-2.png" alt="" />
           <p>Cashout</p>
         </button>
@@ -89,7 +95,10 @@
           <img src="./assets/opt-5.png" alt="" />
           <p>Pay Bill</p>
         </button>
-        <button class="btn flex-col h-full py-4 btn-primary btn-soft">
+        <button
+          onclick="showonly('history')"
+          class="btn flex-col h-full py-4 btn-primary btn-soft"
+        >
           <img src="./assets/opt-6.png" alt="" />
           <p>Transactions</p>
         </button>
@@ -102,7 +111,10 @@
         <div class="card-body">
           <fieldset class="fieldset">
             <label class="label text-neutral font-bold">Select Bank</label>
-            <select id="add-money-bank" class="select w-full bg-base-200 rounded-full">
+            <select
+              id="add-money-bank"
+              class="select w-full bg-base-200 rounded-full"
+            >
               <option disabled selected>Select a Bank</option>
               <option value="DBBL">DBBL</option>
               <option value="IBBL">IBBL</option>
@@ -110,8 +122,10 @@
               <option value="AGRANI">Agrani Bank</option>
               <option value="UCB">UCB Bank</option>
             </select>
-            <br>
-            <label class="label text-neutral font-bold">Bank Account Number</label>
+            <br />
+            <label class="label text-neutral font-bold"
+              >Bank Account Number</label
+            >
             <input
               id="add-money-number"
               maxlength="11"
@@ -137,7 +151,10 @@
               class="input rounded-full bg-base-200 w-full"
               placeholder="Enter 4 digit pin number"
             />
-            <button id="add-money-btn" class="btn btn-primary mt-4 rounded-full">
+            <button
+              id="add-money-btn"
+              class="btn btn-primary mt-4 rounded-full"
+            >
               Add Money
             </button>
           </fieldset>
@@ -184,6 +201,13 @@
         </div>
       </div>
     </section>
+
+    <!-- transaction section -->
+    <section id="history" class="w-11/12 mx-auto py-5">
+      <h2 class="text-xl font-bold">Transactions</h2>
+      <div class="space-y-5" id="history-container"></div>
+    </section>
+
     <!-- scripts -->
     <script src="./JS/machine.js"></script>
     <script src="./JS/add-money.js"></script>
