@@ -14,3 +14,14 @@ function setBalance(value) {
   const balanceElement = document.getElementById("balance");
   balanceElement.innerText = value;
 }
+// machine - id > hide all > show id
+function showonly(id) {
+  const addmoney = document.getElementById("add-money");
+  const cashout = document.getElementById("cashout");
+  // hide all
+  addmoney.classList.add('hidden');
+  cashout.classList.add('hidden');
+  // show the element with id
+  const selected = document.getElementById(id);
+  selected.classList.remove('hidden');
+}
